@@ -25,7 +25,7 @@ public class UserMapperTest extends BaseMapperTest {
 			//获取 UserMapper 接口
 			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 			//调用 selectById 方法，查询 id = 1 的用户
-			SysUser user = userMapper.selectById(1l);
+			SysUser user = userMapper.selectById(1L);
 			//user 不为空
 			Assert.assertNotNull(user);
 			//userName = admin
