@@ -72,7 +72,7 @@ public class CacheTest extends BaseMapperTest {
 			//虽然我们没有更新数据库，但是这个用户名和我们 role1 重新赋值的名字相同了
 			Assert.assertEquals("New Name", role2.getRoleName());
 			//不仅如何，role2 和 role1 完全就是同一个实例
-			Assert.assertNotEquals(role1, role2);
+			Assert.assertEquals(role1, role2);
 		} finally {
 			//关闭当前的 sqlSession
 			sqlSession.close();
